@@ -1,0 +1,1 @@
+add-computer –domainname ad.lab.scape -Credential labscape\administrator -restart –force
