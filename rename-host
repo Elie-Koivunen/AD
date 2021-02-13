@@ -1,0 +1,6 @@
+#For computers that are in a workgroup, run PowerShell console as administrator, and then type:
+Rename-Computer -NewName "DC" -Restart 
+Rename-Computer -NewName "ComputerName" -LocalCredential localhostAdminUser -Restart 
+
+#For computers that are in a domain, run PowerShell console as administrator, and then type:
+Rename-Computer -NewName "ComputerName" -DomainCredential DomainAdminUser -Restart
