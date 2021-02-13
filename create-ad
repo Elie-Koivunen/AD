@@ -1,0 +1,8 @@
+install-windowsfeature AD-Domain-Services  -IncludeManagementTools
+Import-Module ADDSDeployment
+Install-ADDSForest -DomainName "ad.lab.scape" -DomainNetbiosName "labscape" -CreateDnsDelegation:$false -DatabasePath "C:\Windows\NTDS" -DomainMode "7" -ForestMode "7" -InstallDns:$true -LogPath "C:\Windows\NTDS" -NoRebootOnCompletion:$false -SysvolPath "C:\Windows\SYSVOL" -Force:$true
+
+
+Get-Service adws,kdc,netlogon,dns
+Get-ADDomainController
+Get-ADDomain ad.lab.scape
