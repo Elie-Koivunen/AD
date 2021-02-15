@@ -1,0 +1,26 @@
+The windows GUI only displays file times to the nearest second. To get the detail on what is stored in windows, you have to use WMIC commands in the command window (the “dir” is default set to round to the nearest second). 
+For example –
+
+C:\Users\macaup>wmic datafile where name="C:\\users\\macaup\\dnsflush.txt" get creationdate
+CreationDate
+20181111124355.373042-240
+C:\Users\macaup>
+C:\Users\macaup>wmic datafile where name="C:\\users\\macaup\\dnsflush.txt" get lastmodified
+LastModified
+20181116152013.555878-240
+C:\Users\macaup>
+
+The output number 20181116152013.555878-240 is a timestamp, with the following format:
+
+yyyymmddHHMMSS.xxxxxxsUUU
+where:
+⦁	yyyy Four-digit year (0000 through 9999).
+⦁	mm Two-digit month (01 through 12).
+⦁	dd Two-digit day of the month (01 through 31).
+⦁	HH Two-digit hour of the day using the 24-hour clock (00 through 23).
+⦁	MM Two-digit minute in the hour (00 through 59).
+⦁	SS Two-digit number of seconds in the minute (00 through 59).
+⦁	xxxxxx Six-digit number of microseconds in the second (000000 through 999999)
+⦁	s Plus sign (+) or minus sign (-) to indicate a positive or negative offset from Coordinated Universal Times (UTC).
+⦁	UUU Three-digit offset indicating the number of minutes that the originating time zone deviates from UTC.
+
