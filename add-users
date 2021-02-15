@@ -1,0 +1,12 @@
+https://blog.netwrix.com/2018/06/07/how-to-create-new-active-directory-users-with-powershell/
+http://techgenix.com/creating-active-directory-accounts-using-powershell/ 
+
+new-aduser -name "appuser1" -GivenName "appuser1" -Surname "appuser1" -SamAccountname "appuser1" -userprincipalname "appuser1@workscape.lab" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+new-aduser -name "appuser2" -GivenName "appuser2" -Surname "appuser2" -SamAccountname "appuser2" -userprincipalname "appuser2@workscape.lab" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+new-aduser -name "appuser3" -GivenName "appuser3" -Surname "appuser3" -SamAccountname "appuser3" -userprincipalname "appuser3@workscape.lab" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+new-aduser -name "appuser4" -GivenName "appuser4" -Surname "appuser4" -SamAccountname "appuser4" -userprincipalname "appuser4@workscape.lab" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+new-aduser -name "appuser5" -GivenName "appuser5" -Surname "appuser5" -SamAccountname "appuser5" -userprincipalname "appuser5@workscape.lab" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+
+
+new-adgroup -name appgroup -groupscope global
+Add-ADGroupMember -Identity "appgroup" -Members appuser1,appuser2,appuser3,appuser4,appuser5
