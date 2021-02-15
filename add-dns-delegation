@@ -1,0 +1,27 @@
+cls02-ssip.ad.lab.scape		IN 	A	172.31.7.196
+cls02-mgmt-vip.ad.lab.scape	IN	NS	cls02-ssip.ad.lab.scape
+cls02-rep.ad.lab.scape     	IN	NS	cls02-ssip.ad.lab.scape
+cls02-bkp.ad.lab.scape     	IN	NS	cls02-ssip.ad.lab.scape
+cls02-nfs.ad.lab.scape     	IN	NS	cls02-ssip.ad.lab.scape
+cls02-smb.ad.lab.scape     	IN	NS	cls02-ssip.ad.lab.scape
+
+cls01-ssip.ad.lab.scape		IN 	A	172.31.8.196
+cls01-mgmt-vip.ad.lab.scape	IN	NS	cls01-ssip.ad.lab.scape
+cls01-rep.ad.lab.scape     	IN	NS	cls01-ssip.ad.lab.scape
+cls01-bkp.ad.lab.scape     	IN	NS	cls01-ssip.ad.lab.scape
+cls01-nfs.ad.lab.scape     	IN	NS	cls01-ssip.ad.lab.scape
+cls01-smb.ad.lab.scape     	IN	NS	cls01-ssip.ad.lab.scape
+
+Add-DnsServerZoneDelegation -Name "ad.lab.scape" -ChildZoneName "cls02-mgmt-vip" -NameServer "cls02-ssip.ad.lab.scape" -IPAddress 172.31.7.196
+Add-DnsServerZoneDelegation -Name "ad.lab.scape" -ChildZoneName "cls02-rep" -NameServer "cls02-ssip.ad.lab.scape" -IPAddress 172.31.7.196
+Add-DnsServerZoneDelegation -Name "ad.lab.scape" -ChildZoneName "cls02-bkp" -NameServer "cls02-ssip.ad.lab.scape" -IPAddress 172.31.7.196
+Add-DnsServerZoneDelegation -Name "ad.lab.scape" -ChildZoneName "cls02-nfs" -NameServer "cls02-ssip.ad.lab.scape" -IPAddress 172.31.7.196
+Add-DnsServerZoneDelegation -Name "ad.lab.scape" -ChildZoneName "cls02-smb" -NameServer "cls02-ssip.ad.lab.scape" -IPAddress 172.31.7.196
+
+Add-DnsServerZoneDelegation -Name "ad.lab.scape" -ChildZoneName "cls01-mgmt-vip" -NameServer "cls01-ssip.ad.lab.scape" -IPAddress 172.31.8.196
+Add-DnsServerZoneDelegation -Name "ad.lab.scape" -ChildZoneName "cls01-rep" -NameServer "cls01-ssip.ad.lab.scape" -IPAddress 172.31.8.196
+Add-DnsServerZoneDelegation -Name "ad.lab.scape" -ChildZoneName "cls01-bkp" -NameServer "cls01-ssip.ad.lab.scape" -IPAddress 172.31.8.196
+Add-DnsServerZoneDelegation -Name "ad.lab.scape" -ChildZoneName "cls01-nfs" -NameServer "cls01-ssip.ad.lab.scape" -IPAddress 172.31.8.196
+Add-DnsServerZoneDelegation -Name "ad.lab.scape" -ChildZoneName "cls01-smb" -NameServer "cls01-ssip.ad.lab.scape" -IPAddress 172.31.8.196
+
+for ($i=21; $i -le 25; $i++){ Add-DnsServerResourceRecordPtr -Name $i -ZoneName "186.168.192.in-addr.arpa" -PtrDomainName "cls01.lab.scape" }
