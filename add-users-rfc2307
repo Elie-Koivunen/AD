@@ -1,0 +1,175 @@
+new-aduser -name "labuser1" -GivenName "labuser1" -Surname "labuser1" -SamAccountname "labuser1" -userprincipalname "labuser1@lab.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity labuser1 -add @{gidnumber="60001" ; uid="labuser1" ; uidnumber="60001"}
+
+new-aduser -name "labuser2" -GivenName "labuser2" -Surname "labuser2" -SamAccountname "labuser2" -userprincipalname "labuser2@lab.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity labuser2 -add @{gidnumber="60002" ; uid="labuser2" ; uidnumber="60002"}
+
+new-aduser -name "labuser3" -GivenName "labuser3" -Surname "labuser3" -SamAccountname "labuser3" -userprincipalname "labuser3@lab.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity labuser3 -add @{gidnumber="60003" ; uid="labuser3" ; uidnumber="60003"}
+
+new-aduser -name "labuser4" -GivenName "labuser4" -Surname "labuser4" -SamAccountname "labuser4" -userprincipalname "labuser4@lab.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity labuser4 -add @{gidnumber="60004" ; uid="labuser4" ; uidnumber="60004"}
+
+new-aduser -name "labuser5" -GivenName "labuser5" -Surname "labuser5" -SamAccountname "labuser5" -userprincipalname "labuser5@lab.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity labuser5 -add @{gidnumber="60005" ; uid="labuser5" ; uidnumber="60005"}
+
+new-aduser -name "appuser1" -GivenName "appuser1" -Surname "appuser1" -SamAccountname "appuser1" -userprincipalname "appuser1@lab.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity appuser1 -add @{gidnumber="60006" ; uid="appuser1" ; uidnumber="60006"}
+
+new-aduser -name "appuser2" -GivenName "appuser2" -Surname "appuser2" -SamAccountname "appuser2" -userprincipalname "appuser2@lab.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity appuser2 -add @{gidnumber="60007" ; uid="appuser2" ; uidnumber="60007"}
+
+new-aduser -name "appuser3" -GivenName "appuser3" -Surname "appuser3" -SamAccountname "appuser3" -userprincipalname "appuser3@lab.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity appuser3 -add @{gidnumber="60008" ; uid="appuser3" ; uidnumber="60008"}
+
+new-aduser -name "appuser4" -GivenName "appuser4" -Surname "appuser4" -SamAccountname "appuser4" -userprincipalname "appuser4@lab.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity appuser4 -add @{gidnumber="60009" ; uid="appuser4" ; uidnumber="60009"}
+
+new-aduser -name "appuser5" -GivenName "appuser5" -Surname "appuser5" -SamAccountname "appuser5" -userprincipalname "appuser5@lab.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity appuser5 -add @{gidnumber="60010" ; uid="appuser5" ; uidnumber="60010"}
+
+new-aduser -name "homeadmin1" -GivenName "homeadmin1" -Surname "homeadmin1" -SamAccountname "homeadmin1" -userprincipalname "homeadmin1@home.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity homeadmin1 -add @{gidnumber="60011" ; uid="homeadmin1" ; uidnumber="60011"}
+
+new-aduser -name "homeadmin2" -GivenName "homeadmin2" -Surname "homeadmin2" -SamAccountname "homeadmin2" -userprincipalname "homeadmin2@home.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity homeadmin2 -add @{gidnumber="60012" ; uid="homeadmin2" ; uidnumber="60012"}
+
+new-aduser -name "homeadmin3" -GivenName "homeadmin3" -Surname "homeadmin3" -SamAccountname "homeadmin3" -userprincipalname "homeadmin3@home.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity homeadmin3 -add @{gidnumber="60013" ; uid="homeadmin3" ; uidnumber="60013"}
+
+new-aduser -name "homeadmin4" -GivenName "homeadmin4" -Surname "homeadmin4" -SamAccountname "homeadmin4" -userprincipalname "homeadmin4@home.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity homeadmin4-add @{gidnumber="60014" ; uid="homeadmin4" ; uidnumber="60014"}
+
+new-aduser -name "homeadmin5" -GivenName "homeadmin5" -Surname "homeadmin5" -SamAccountname "homeadmin5" -userprincipalname "homeadmin5@home.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity homeadmin5 -add @{gidnumber="60015" ; uid="homeadmin5" ; uidnumber="60015"}
+
+new-aduser -name "groupadmin1" -GivenName "groupadmin1" -Surname "groupadmin1" -SamAccountname "groupadmin1" -userprincipalname "groupadmin1@group.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity groupadmin1 -add @{gidnumber="60016" ; uid="groupadmin1" ; uidnumber="60016"}
+
+new-aduser -name "groupadmin2" -GivenName "groupadmin2" -Surname "groupadmin2" -SamAccountname "groupadmin2" -userprincipalname "groupadmin2@group.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity groupadmin2 -add @{gidnumber="60017" ; uid="groupadmin2" ; uidnumber="60017"}
+
+new-aduser -name "groupadmin3" -GivenName "groupadmin3" -Surname "groupadmin3" -SamAccountname "groupadmin3" -userprincipalname "groupadmin3@group.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity groupadmin3 -add @{gidnumber="60018" ; uid="groupadmin3" ; uidnumber="60018"}
+
+new-aduser -name "groupadmin4" -GivenName "groupadmin4" -Surname "groupadmin4" -SamAccountname "groupadmin4" -userprincipalname "groupadmin4@group.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity groupadmin4 -add @{gidnumber="60019" ; uid="groupadmin4" ; uidnumber="60019"}
+
+new-aduser -name "groupadmin5" -GivenName "groupadmin5" -Surname "groupadmin5" -SamAccountname "groupadmin5" -userprincipalname "groupadmin5@group.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity groupadmin5 -add @{gidnumber="60020" ; uid="groupadmin5" ; uidnumber="60020"}
+
+new-aduser -name "appadmin1" -GivenName "appadmin1" -Surname "appadmin1" -SamAccountname "appadmin1" -userprincipalname "appadmin1@app.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity appadmin1 -add @{gidnumber="60021" ; uid="appadmin1" ; uidnumber="60021"}
+
+new-aduser -name "appadmin2" -GivenName "appadmin2" -Surname "appadmin2" -SamAccountname "appadmin2" -userprincipalname "appadmin2@app.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity appadmin2 -add @{gidnumber="60022" ; uid="appadmin2" ; uidnumber="60022"}
+
+new-aduser -name "appadmin3" -GivenName "appadmin3" -Surname "appadmin3" -SamAccountname "appadmin3" -userprincipalname "appadmin3@app.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity appadmin3 -add @{gidnumber="60023" ; uid="appadmin3" ; uidnumber="60023"}
+
+new-aduser -name "appadmin4" -GivenName "appadmin4" -Surname "appadmin4" -SamAccountname "appadmin4" -userprincipalname "appadmin4@app.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity appadmin4 -add @{gidnumber="60024" ; uid="appadmin4" ; uidnumber="60024"}
+
+new-aduser -name "appadmin5" -GivenName "appadmin5" -Surname "appadmin5" -SamAccountname "appadmin5" -userprincipalname "appadmin5@app.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity appadmin5 -add @{gidnumber="60025" ; uid="appadmin5" ; uidnumber="60025"}
+
+new-aduser -name "labadmin1" -GivenName "labadmin1" -Surname "labadmin1" -SamAccountname "labadmin1" -userprincipalname "labadmin1@lab.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity appadmin5 -add @{gidnumber="60026" ; uid="appadmin5" ; uidnumber="60026"}
+
+new-aduser -name "labadmin2" -GivenName "labadmin2" -Surname "labadmin2" -SamAccountname "labadmin2" -userprincipalname "labadmin2@lab.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity labadmin2 -add @{gidnumber="60027" ; uid="labadmin2" ; uidnumber="60027"}
+
+new-aduser -name "labadmin3" -GivenName "labadmin3" -Surname "labadmin3" -SamAccountname "labadmin3" -userprincipalname "labadmin3@lab.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity labadmin3 -add @{gidnumber="60028" ; uid="labadmin3" ; uidnumber="60028"}
+
+new-aduser -name "labadmin4" -GivenName "labadmin4" -Surname "labadmin4" -SamAccountname "labadmin4" -userprincipalname "labadmin4@lab.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity labadmin4 -add @{gidnumber="60029" ; uid="labadmin4" ; uidnumber="60029"}
+
+new-aduser -name "labadmin5" -GivenName "labadmin5" -Surname "labadmin5" -SamAccountname "labadmin5" -userprincipalname "labadmin5@lab.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity labadmin5 -add @{gidnumber="60030" ; uid="labadmin5" ; uidnumber="60030"}
+
+new-aduser -name "zoneadmin1" -GivenName "zoneadmin1" -Surname "zoneadmin1" -SamAccountname "zoneadmin1" -userprincipalname "zoneadmin1@lab.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity zoneadmin1 -add @{gidnumber="60031" ; uid="zoneadmin1" ; uidnumber="60031"}
+
+new-aduser -name "zoneadmin2" -GivenName "zoneadmin2" -Surname "zoneadmin2" -SamAccountname "zoneadmin2" -userprincipalname "zoneadmin2@lab.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity zoneadmin2 -add @{gidnumber="60032" ; uid="zoneadmin2" ; uidnumber="60032"}
+
+new-aduser -name "zoneadmin3" -GivenName "zoneadmin3" -Surname "zoneadmin3" -SamAccountname "zoneadmin3" -userprincipalname "zoneadmin3@lab.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity zoneadmin3 -add @{gidnumber="60033" ; uid="zoneadmin3" ; uidnumber="60033"}
+
+new-aduser -name "zoneadmin4" -GivenName "zoneadmin4" -Surname "zoneadmin4" -SamAccountname "zoneadmin4" -userprincipalname "zoneadmin4@lab.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity zoneadmin4 -add @{gidnumber="60034" ; uid="zoneadmin4" ; uidnumber="60034"}
+
+new-aduser -name "zoneadmin5" -GivenName "zoneadmin5" -Surname "zoneadmin5" -SamAccountname "zoneadmin5" -userprincipalname "zoneadmin5@lab.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity zoneadmin5 -add @{gidnumber="60035" ; uid="zoneadmin5" ; uidnumber="60035"}
+
+new-aduser -name "podadmin1" -GivenName "podadmin1" -Surname "podadmin1" -SamAccountname "podadmin1" -userprincipalname "podadmin1@pod.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity podadmin1 -add @{gidnumber="60036" ; uid="podadmin1" ; uidnumber="60036"}
+
+new-aduser -name "podadmin2" -GivenName "podadmin2" -Surname "podadmin2" -SamAccountname "podadmin2" -userprincipalname "podadmin2@pod.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity podadmin2 -add @{gidnumber="60037" ; uid="podadmin2" ; uidnumber="60037"}
+
+new-aduser -name "podadmin3" -GivenName "podadmin3" -Surname "podadmin3" -SamAccountname "podadmin3" -userprincipalname "podadmin3@pod.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity podadmin3 -add @{gidnumber="60038" ; uid="podadmin3" ; uidnumber="60038"}
+
+new-aduser -name "podadmin4" -GivenName "podadmin4" -Surname "podadmin4" -SamAccountname "podadmin4" -userprincipalname "podadmin4@pod.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity podadmin4 -add @{gidnumber="60039" ; uid="podadmin4" ; uidnumber="60039"}
+
+new-aduser -name "podadmin5" -GivenName "podadmin5" -Surname "podadmin5" -SamAccountname "podadmin5" -userprincipalname "podadmin5@pod.scape" -ChangePasswordAtLogon $false -AccountPassword (ConvertTo-SecureString "1#Password" -AsPlainText -force) -passThru -enabled $true
+Set-ADUser -identity podadmin5 -add @{gidnumber="60040" ; uid="podadmin5" ; uidnumber="60040"}
+
+new-adgroup -name labusers -groupscope global
+Add-ADGroupMember -Identity "labusers" -Members labuser1,labuser2,labuser3,labuser4,labuser5
+Set-ADGroup -identity "labusers" -Replace @{"GIDNumber" = "160001"}
+
+new-adgroup -name appusers -groupscope global
+Add-ADGroupMember -Identity "appusers" -Members appuser1,appuser2,appuser3,appuser4,appuser5
+Set-ADGroup -identity "appusers" -Replace @{"GIDNumber" = "160002"}
+
+new-adgroup -name admins-cos01 -groupscope global
+Add-ADGroupMember -Identity "admins-cos01" -Members zoneadmin1,labadmin1,labuser1
+Set-ADGroup -identity "admins-cos01" -Replace @{"GIDNumber" = "160003"}
+
+new-adgroup -name admins-cos02 -groupscope global
+Add-ADGroupMember -Identity "admins-cos02" -Members zoneadmin2,labadmin2,labuser2
+Set-ADGroup -identity "admins-cos02" -Replace @{"GIDNumber" = "160004"}
+
+new-adgroup -name admins-cos03 -groupscope global
+Add-ADGroupMember -Identity "admins-cos03" -Members zoneadmin3,labadmin3,labuser3
+Set-ADGroup -identity "admins-cos03" -Replace @{"GIDNumber" = "160005"}
+
+new-adgroup -name admins-lab -groupscope global
+Add-ADGroupMember -Identity "admins-lab" -Members labadmin1,labadmin2,labadmin3,labadmin4,labadmin5
+Set-ADGroup -identity "admins-lab" -Replace @{"GIDNumber" = "160006"}
+
+new-adgroup -name admins-zone -groupscope global
+Add-ADGroupMember -Identity "admins-zone" -Members zoneadmin1,zoneadmin2,zoneadmin3,zoneadmin4,zoneadmin5
+Set-ADGroup -identity "admins-zone" -Replace @{"GIDNumber" = "160007"}
+
+new-adgroup -name admins-homedir -groupscope global
+Add-ADGroupMember -Identity "admins-homedir" -Members homeadmin1,homeadmin2,homeadmin3,homeadmin4,homeadmin5
+Set-ADGroup -identity "admins-homedir" -Replace @{"GIDNumber" = "160008"}
+
+new-adgroup -name admins-groupdir -groupscope global
+Add-ADGroupMember -Identity "admins-groupdir" -Members groupadmin1,groupadmin2,groupadmin3,groupadmin4,groupadmin5
+Set-ADGroup -identity "admins-groupdir" -Replace @{"GIDNumber" = "160009"}
+
+new-adgroup -name admins-appdir -groupscope global
+Add-ADGroupMember -Identity "admins-appdir" -Members appadmin1,appadmin2,appadmin3,appadmin4,appadmin5
+Set-ADGroup -identity "admins-appdir" -Replace @{"GIDNumber" = "160010"}
+
+new-adgroup -name admins-pod01 -groupscope global
+Add-ADGroupMember -Identity "admins-pod01" -Members podadmin1,podadmin2
+Set-ADGroup -identity "admins-pod01" -Replace @{"GIDNumber" = "160011"}
+
+new-adgroup -name admins-pod02 -groupscope global
+Add-ADGroupMember -Identity "admins-pod02" -Members podadmin2,podadmin3
+Set-ADGroup -identity "admins-pod02" -Replace @{"GIDNumber" = "160012"}
+
+new-adgroup -name admins-pod03 -groupscope global
+Add-ADGroupMember -Identity "admins-pod03" -Members podadmin3,podadmin4
+Set-ADGroup -identity "admins-pod03" -Replace @{"GIDNumber" = "160013"}
+
+new-adgroup -name admins-pod04 -groupscope global
+Add-ADGroupMember -Identity "admins-pod04" -Members podadmin4,podadmin5
+Set-ADGroup -identity "admins-pod04" -Replace @{"GIDNumber" = "160014"}
