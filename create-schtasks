@@ -1,0 +1,1 @@
+schtasks /create /SC MONTHLY /TN "MySchedules\extend-FF-account" /tr "C:\Program Files\Google\Chrome\Application\chrome.exe https://www.ce.com/lightning/page/home" /ST 11:30 /IT
