@@ -25,7 +25,7 @@ Sub SaveEmailAddressesToCSV()
     regex.Pattern = "[a-z0-9]+([._][a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})"
     
     If Not Folder Is Nothing Then
-        FileName = "C:\adm\email-address.csv"
+        FileName = "C:\email-address.csv"
         
         i = 1
         For Each Item In Folder.Items
