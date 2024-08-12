@@ -1,0 +1,34 @@
+Option Explicit
+
+Sub SaveEmailAddressesToCSV()
+    Dim ns As Namespace
+    Dim Folder As MAPIFolder
+    Dim Item As Object
+    Dim Mail As MailItem
+    Dim FileName As String
+    Dim i As Integer
+    Dim CSVFile As String
+    Dim OutputLine As String
+    
+    Set ns = GetNamespace("MAPI")
+    Set Folder = ns.PickFolder ' User selects the folder
+    
+    If Not Folder Is Nothing Then
+        FileName = "C:\adm\email-address.csv"
+        
+        i = 1
+        Open FileName For Output As #1
+        For Each Item In Folder.Items
+            If Item.Class = olMail Then
+                Set Mail = Item
+                If Mail.ReceivedTime >= #1/1/2014# Then
+                    OutputLine = Chr(34) & Mail.To & Chr(34) & "," & Chr(34) & Mail.SenderEmailAddress & Chr(34) & "," & Chr(34) & Mail.CC & Chr(34) & "," & Chr(34) & Mail.BCC & Chr(34)
+                    Print #1, OutputLine
+                    i = i + 1
+                End If
+            End If
+        Next Item
+        Close #1
+    End If
+End Sub
+
