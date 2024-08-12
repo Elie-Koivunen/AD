@@ -9,25 +9,46 @@ Sub SaveEmailAddressesToCSV()
     Dim i As Integer
     Dim CSVFile As String
     Dim OutputLine As String
+    Dim Recipients As Recipients
+    Dim Recipient As Recipient
+    Dim Address As String
+    Dim regex As Object
+    Dim matches As Object
+    Dim EmailAddresses As Object
+    Dim EmailAddress As Variant
     
     Set ns = GetNamespace("MAPI")
     Set Folder = ns.PickFolder ' User selects the folder
+    Set regex = CreateObject("VBScript.RegExp")
+    Set EmailAddresses = CreateObject("Scripting.Dictionary")
+    
+    regex.Pattern = "[a-z0-9]+([._][a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})"
     
     If Not Folder Is Nothing Then
         FileName = "C:\adm\email-address.csv"
         
         i = 1
-        Open FileName For Output As #1
         For Each Item In Folder.Items
             If Item.Class = olMail Then
                 Set Mail = Item
                 If Mail.ReceivedTime >= #1/1/2014# Then
-                    OutputLine = Chr(34) & Mail.To & Chr(34) & "," & Chr(34) & Mail.SenderEmailAddress & Chr(34) & "," & Chr(34) & Mail.CC & Chr(34) & "," & Chr(34) & Mail.BCC & Chr(34)
-                    Print #1, OutputLine
-                    i = i + 1
+                    Set Recipients = Mail.Recipients
+                    For Each Recipient In Recipients
+                        Address = Recipient.Address
+                        If regex.Test(Address) Then
+                            If Not EmailAddresses.Exists(Address) Then
+                                EmailAddresses.Add Address, ""
+                            End If
+                        End If
+                    Next Recipient
                 End If
             End If
         Next Item
+        
+        Open FileName For Output As #1
+        For Each EmailAddress In EmailAddresses.Keys
+            Print #1, EmailAddress
+        Next EmailAddress
         Close #1
     End If
 End Sub
